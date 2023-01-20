@@ -3,9 +3,9 @@ for i in range(1, 10):
     print("{:02d}, ".format(i), end='')
 for i in range(10, 90):
     if i % 10 < i/10:
-        pass
+        continue
     elif i % 10 == i / 10:
-        pass
+        continue
     if i < 89:
         print("{:02d}, ".format(i), end='')
 print("89")
