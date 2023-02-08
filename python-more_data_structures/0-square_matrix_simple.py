@@ -7,6 +7,6 @@ def square_matrix_simple(matrix=[]):
         
         new_mat = [[0] * a for i in range(a)]
         for i in range(a):
-            for j in range(0, a):
+            for j in range(0, a - 1):
                 new_mat[i][j] = matrix[i][j] ** 2
         return new_mat
