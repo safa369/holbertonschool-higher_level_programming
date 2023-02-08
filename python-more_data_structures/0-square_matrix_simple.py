@@ -4,9 +4,9 @@ def square_matrix_simple(matrix=[]):
         return matrix
     else:
         a = len(matrix)
-        b = len(matrix)
-        new_mat = [[0] * b for i in range(a)]
+        
+        new_mat = [[0] * a for i in range(a)]
         for i in range(a):
-            for j in range(b):
-                new_mat[i][j] = matrix[i][j] * matrix[i][j]
+            for j in range(0, a):
+                new_mat[i][j] = matrix[i][j] ** 2
         return new_mat
