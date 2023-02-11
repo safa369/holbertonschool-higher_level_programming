@@ -3,4 +3,5 @@ Two types of Error occurs in python.
  
 
 Syntax errors
+
 Logical errors (Exceptions) 
