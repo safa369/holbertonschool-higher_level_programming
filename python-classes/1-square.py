@@ -10,6 +10,6 @@ class Square:
     def __init__(self, size):
         """
         Args:
-        size: size for _size attribute of class instance
+        size: size for __size attribute of class instance
         """
-        self._size = size
+        self.__size = size
