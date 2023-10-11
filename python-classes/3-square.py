@@ -19,12 +19,6 @@ class Square:
 
     def area(self):
         """
-        square value
-        Return:
-            int: the square value"""
+        return current square value
+        """
         return self.__size ** 2
-
-
-print(Square.__doc__)
-print(Square.__init__.__doc__)
-print(Square.area.__doc__)
