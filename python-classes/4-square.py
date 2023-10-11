@@ -1,5 +1,7 @@
 #!usr/bin/python3
-"""This module create a class named square"""
+"""square class"""
+
+
 class Square:
     """
     Square:
@@ -17,6 +19,14 @@ class Square:
         """
         self.__size = size
 
+    def area(self):
+        """
+        square area
+        Return:
+            the current square area (int)
+        """
+        return (self.__size ** 2)
+
     @property
     def size(self):
         """
@@ -25,7 +35,7 @@ class Square:
             size os square
         """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """
@@ -44,10 +54,3 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-
-    def area(self):
-        """
-        square area
-        Return:
-            the current square area (int)"""
-        return (self.__size ** 2)
