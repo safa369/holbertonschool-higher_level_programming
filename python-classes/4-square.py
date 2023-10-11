@@ -3,7 +3,7 @@
 
 
 class Square:
-    """a class named Square.
+    """a class named Square
     Attributes:
         attr(size): size of square
     """
