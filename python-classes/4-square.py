@@ -11,24 +11,14 @@ class Square:
     """
 
     def __init__(self, size=0):
-        """
-        Instance the class Square
-        Args:
-            size(int): the size of square
-        """
+        """Initialise the size"""
         self.__size = size
 
     def area(self):
-        """
-        square area Return the current square area (int)
-        """
         return (self.__size ** 2)
 
     @property
     def size(self):
-        """
-        getter of size
-        """
         return self.__size
 
     @size.setter
