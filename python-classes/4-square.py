@@ -9,21 +9,18 @@ class Square:
     Attributes:
         size(int): size of square
     """
+
     def __init__(self, size=0):
         """
         Instance the class Square
         Args:
             size(int): the size of square
-        Return:
-            None
         """
         self.__size = size
 
     def area(self):
         """
-        square area
-        Return:
-            the current square area (int)
+        square area Return the current square area (int)
         """
         return (self.__size ** 2)
 
@@ -31,23 +28,11 @@ class Square:
     def size(self):
         """
         getter of size
-        Return:
-            size os square
         """
         return self.__size
 
-    @property.setter
+    @size.setter
     def size(self, value):
-        """
-        Setter of size
-        Args:
-            size(int): size of a size of square
-        Raises:
-            TypeError: if size is not an integer
-            ValueError: if size is less than 0
-        Return:
-            None
-        """
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
