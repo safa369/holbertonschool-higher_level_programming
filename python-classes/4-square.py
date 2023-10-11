@@ -1,5 +1,5 @@
 #!usr/bin/python3
-"""square class"""
+"""a class model named square """
 
 
 class Square:
@@ -7,7 +7,6 @@ class Square:
     Attributes:
         attr(size): size of square
     """
-
     def __init__(self, size=0):
         """Initialise the size"""
         self.__size = size
@@ -26,4 +25,4 @@ class Square:
             self.__size = value
 
     def area(self):
-        return (self.__size ** 2)
+        return self.__size ** 2
