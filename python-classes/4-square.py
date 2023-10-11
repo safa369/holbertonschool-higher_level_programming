@@ -5,14 +5,16 @@ class Square:
     Square:
     A class named Square.
     Attributes:
-    attrib1(size): size of square"""
+        size(int): size of square
+    """
     def __init__(self, size=0):
-        """ Instance the class Square
+        """
+        Instance the class Square
         Args:
             size(int): the size of square
         Return:
             None
-            """
+        """
         self.__size = size
 
     @property
