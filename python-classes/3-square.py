@@ -23,3 +23,8 @@ class Square:
         Return:
             int: the square value"""
         return self.__size ** 2
+
+
+print(Square.__doc__)
+print(Square.__init__.__doc__)
+print(Square.area.__doc__)
