@@ -9,7 +9,8 @@ class Square:
     attr1(size): size of square."""
     def __init__(self, size=0):
         """
-        Args: size(int): size for __size attribute of class"""
+        Args:
+        size(int): size for __size attribute of class"""
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
