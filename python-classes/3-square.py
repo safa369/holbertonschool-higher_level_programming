@@ -5,9 +5,9 @@ class Square:
     Attributes:
     attr1(size): size of square.Args:
         size(int): size for __size attribute of class
-        Raises:
-            TypeError: if size is not an integer.
-            ValueError: if size is less than 0."""
+    Raises:
+        TypeError: if size is not an integer.
+        ValueError: if size is less than 0."""
 
     def __init__(self, size=0):
         if type(size) != int:
