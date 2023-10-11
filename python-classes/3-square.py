@@ -8,7 +8,7 @@ class Square:
     Attributes:
     attrib1(size): size of square."""
     def __init__(self, size=0):
-        if not isinstance(size, int):
+        if type(size) != int:
             """
             Args: size(int): size for __size attribute of class"""
             raise TypeError("size must be an integer")
@@ -18,6 +18,6 @@ class Square:
 
     def area(self):
         """ square value
-            Return: 
+            Return:
             int: the square value"""
         return self.__size ** 2
