@@ -20,4 +20,4 @@ class Square:
         """ square value
         Return:
         int: the square value"""
-        return self.__size ** 2
+        return self.__size * self.__size
