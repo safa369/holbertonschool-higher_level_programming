@@ -3,11 +3,9 @@
 
 
 class Square:
-    """
-    Square:
-    A class named Square.
+    """a class named Square.
     Attributes:
-        size(int): size of square
+        attr(size): size of square
     """
 
     def __init__(self, size=0):
