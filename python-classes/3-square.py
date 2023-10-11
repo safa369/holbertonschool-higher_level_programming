@@ -1,12 +1,10 @@
 #!usr/bin/python3
-"""A modele that create a class named square"""
-
-
 class Square:
     """Square:
      a class named square.
     Attributes:
     attr1(size): size of square."""
+
     def __init__(self, size=0):
         """
         Args:
