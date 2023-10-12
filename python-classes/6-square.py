@@ -4,7 +4,7 @@
 
 class Square:
     """ a class named square
-    Attributes:
+    Attributtes:
         attr1(size): size of square
         attr2(position): tuple of 2 integers"""
 
