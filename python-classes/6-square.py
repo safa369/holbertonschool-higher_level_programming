@@ -5,8 +5,8 @@
 class Square:
     """ a class named square
     Attributes:
-        attrb1(size): size of square
-        attrb2(position): tuple of 2 integers"""
+        attr1(size): size of square
+        attr2(position): tuple of 2 integers"""
 
     def __init__(self, size=0, position=(0, 0)):
         """initialise size and position"""
