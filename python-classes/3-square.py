@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+""" a class model named square"""
 
 
 class Square:
-    """a class named square."""
+    """a class named square
+    Attributtes:
+        attr(size): size of square"""
     def __init__(self, size=0):
         """initialise object"""
         if type(size) != int:
@@ -13,5 +16,4 @@ class Square:
             self.__size = size
 
     def area(self):
-        """return the square value"""
         return self.__size ** 2
