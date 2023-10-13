@@ -13,7 +13,7 @@ class Rectangle:
         self.width = width
 
     def __repr__(self):
-        return f'Rectangle({self.width}, {self.height}'
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __str__(self):
         r = ""
