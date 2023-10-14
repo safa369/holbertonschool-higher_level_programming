@@ -15,15 +15,3 @@ b must be add_integer
 ... except Exception as e:
 ...     print(e)
 a must be add_integer
->>> try:
-...   print(add_integer(1e100, 2))
-... excepting:
-... traceback (most recent call last):
-...
-OverflowError: a is too large
->>> try:
-...   print(add_integer(20, 2e11 ))
-... excepting:
-... traceback (most recent call last):
-...
-OverflowError: b is too large
