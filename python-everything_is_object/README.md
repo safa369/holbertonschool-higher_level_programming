@@ -1,0 +1,1 @@
+Objects are variables that contain data and functions that can be used to manipulate the data. The object's data can vary in type (string, integer, etc.) depending on how it's been defined. An object is like a mini-program inside python, with its own set of rules and behaviors
