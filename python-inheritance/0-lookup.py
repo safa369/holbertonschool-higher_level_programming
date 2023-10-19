@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""module to implementig attributes and method"""
+
+
 def lookup(obj):
-    look = dir(obj)
-    return look
+    """function that return list of attributes and method"""
+    return dir(obj)
