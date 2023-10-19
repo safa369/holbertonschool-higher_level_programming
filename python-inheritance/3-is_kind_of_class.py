@@ -5,7 +5,7 @@
 def is_kind_of_class(obj, a_class):
     """function is kind of class
     Attributes:
-        obj: the object 
+        obj: the object
         a_class: the class
     Args:None
     Raises: None
