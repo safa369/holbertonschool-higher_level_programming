@@ -3,9 +3,7 @@
 
 
 class BaseGeometry:
-    def __init__(self):
-        pass
-
+    """ class of base geometry"""
     def area(self):
         """function of area"""
         raise Exception("area() is not implemented")
