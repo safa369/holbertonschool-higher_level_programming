@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """model imported from 7-base_geometry"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
 
 class Rectangle(BaseGeometry):
     """class named Rectangle inherits from Base geometry"""
     def __init__(self, width, height):
-        """function"""
+        """function initialize new arguments
+        Args:
+            width: the width of rectangle
+            height: the height of rectangle"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
