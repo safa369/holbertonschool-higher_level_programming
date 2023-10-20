@@ -11,7 +11,6 @@ class MyList(list):
     Rteurn:ascending list"""
 
     def print_sorted(self):
-        new_list = self.copy()
-        new_list = sorted(new_list)
-        print(new_list)
+        """function to print sorted list"""
+        print(sorted(self))
 
