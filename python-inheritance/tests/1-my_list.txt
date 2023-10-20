@@ -1,0 +1,4 @@
+>>> my_list = __import__('1-my_list').my_list
+>>> ml = list()
+>>> ml.print_sorted([1, 5, 6, 2])
+[1, 2, 5, 6]
