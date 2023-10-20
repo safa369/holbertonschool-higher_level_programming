@@ -5,5 +5,6 @@
 def class_to_json(obj):
     """function return the dictionary descreption 
     Args:
-        obj: object"""
+        obj: object
+    Return: the descreption"""
     return vars(obj)
