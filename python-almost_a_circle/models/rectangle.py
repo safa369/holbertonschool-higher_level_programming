@@ -13,7 +13,7 @@ class Rectangle(Base):
             x: integer
             y: integer
             id: identifier"""
-        super().__init__(id)
+        super().__init__(id=id)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -21,44 +21,68 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """getter method to get properties
+        """getter method of width properties
         Return: value"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ setter method to change the value"""
+        """ setter of width
+        Raises:
+            ValueError if value <= 0 or TypeError if value is not integer
+        Return: Value"""
+        if value <= 0:
+            raise ValueError('width must be > 0')
+        elif type(value) != int:
+            raise TypeError('width must be an integer')
         self.__width = value
 
     @property
     def height(self):
-       """getter method to get properties
+       """getter method of height properties
        Return: value"""
        return self.__height
 
     @height.setter
     def height(self, value):
-        """ setter method to change the value"""
+        """ setter of height
+        Raises:
+            ValueError if value <= 0 or TypeError if value is not integer
+        Return: Value"""
+        if value <= 0:
+            raise ValueError('height must be > 0')
+        elif type(value) != int:
+            raise TypeError('height must be an integer')
         self.__height = value
 
     @property
     def x(self):
-        """getter method to get properties
+        """getter method of x properties
         Return: value"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """ setter method to change the value"""
+        """ setter method of x
+        Raises:
+            ValueError if value < 0
+        Return: Value"""
+        if value < 0:
+            raise ValueError('x must be >= 0')
         self.__x = value
 
     @property
     def y(self):
-        """getter method to get properties
+        """getter method of y properties
         Return: value"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """ setter method to change the value"""
+        """ setter method of y
+        Raises:
+            ValueError if value < 0
+        Return: Value"""
+        if value < 0:
+            raise ValueError('y must be >= 0')
         self.__y = value
