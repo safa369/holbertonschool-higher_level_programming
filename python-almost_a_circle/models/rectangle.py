@@ -6,7 +6,12 @@ from models.base import Base
 class Rectangle(Base):
     """class named rectangel inherts from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """private variable"""
+        """private variable
+        Attribute:
+            width: the width of rectangle
+            height: the height of rectangle
+            x: integer
+            y: integer"""
         super().__init__(id)
         self.__width = width
         self.__height = height
