@@ -4,15 +4,18 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """class named rectangel inherts from Base"""
+    """Class named rectangel inherts from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """private variable
         Args:
-            width: the width of rectangle
+            width(int): the width of rectangle
             height: the height of rectangle
             x: integer
             y: integer
-            id: identifier"""
+            id: identifier
+        Raises :
+            TypeError: if width or height orx or y is not an integer
+            ValueError: if width or height or x or y is <= 0"""
         super().__init__(id=id)
         self.width = width
         self.height = height
@@ -99,3 +102,8 @@ class Rectangle(Base):
         """function that print the rectangle instance"""
         for _ in range(self.__height):
             print('#' * self.__width)
+
+    def __str__(self):
+        res1 = f'[Rectangle] ({self.id}) '
+        res2 = f'{self.x}/{self.y} - {self.width}/{self.height}'
+        return res1 + res2
