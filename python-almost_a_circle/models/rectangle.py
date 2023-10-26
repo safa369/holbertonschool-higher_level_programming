@@ -109,6 +109,7 @@ class Rectangle(Base):
         return res1 + res2
 
     def display(self):
+        """function print rectangle with #"""
         for _ in range(self.y):
             print()
         for _ in range(self.height):
