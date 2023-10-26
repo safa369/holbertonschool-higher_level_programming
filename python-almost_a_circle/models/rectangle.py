@@ -40,11 +40,11 @@ class Rectangle(Base):
 
     @property
     def height(self):
-       """getter/setter method of height properties
+        """getter/setter method of height properties
         Raises:
             ValueError if value <= 0 or TypeError if value is not integer
-       Return: value"""
-       return self.__height
+        Return: value"""
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -108,3 +108,16 @@ class Rectangle(Base):
             for _ in range(self.x):
                 print(" ", end="")
             print("#" * self.width)
+
+    def update(self, *args):
+        """function assign an argument to attributes"""
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
