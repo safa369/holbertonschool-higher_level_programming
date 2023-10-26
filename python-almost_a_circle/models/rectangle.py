@@ -24,16 +24,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """getter method of width properties
+        """getter/set method of width properties
+        Raises:
+            ValueError if value <= 0 or TypeError if value is not integer
         Return: value"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ setter of width
-        Raises:
-            ValueError if value <= 0 or TypeError if value is not integer
-        Return: Value"""
         if type(value) != int:
             raise TypeError('width must be an integer')
         elif value <= 0:
@@ -42,16 +40,14 @@ class Rectangle(Base):
 
     @property
     def height(self):
-       """getter method of height properties
+       """getter/setter method of height properties
+        Raises:
+            ValueError if value <= 0 or TypeError if value is not integer
        Return: value"""
        return self.__height
 
     @height.setter
     def height(self, value):
-        """ setter of height
-        Raises:
-            ValueError if value <= 0 or TypeError if value is not integer
-        Return: Value"""
         if type(value) != int:
             raise TypeError('height must be an integer')
         elif value <= 0:
@@ -60,16 +56,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """getter method of x properties
+        """get/set method of x properties
+        Raises:
+            ValueError if value < 0
         Return: value"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """ setter method of x
-        Raises:
-            ValueError if value < 0
-        Return: Value"""
         if type(value) != int:
             raise TypeError('x must be an integer')
         elif value < 0:
@@ -78,16 +72,14 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """getter method of y properties
+        """get/setter method of y properties
+        Raises:
+            ValueError if value < 0
         Return: value"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """ setter method of y
-        Raises:
-            ValueError if value < 0
-        Return: Value"""
         if type(value) != int:
             raise TypeError('y must be an integer')
         elif value < 0:
