@@ -107,3 +107,11 @@ class Rectangle(Base):
         res1 = f'[Rectangle] ({self.id}) '
         res2 = f'{self.x}/{self.y} - {self.width}/{self.height}'
         return res1 + res2
+
+    def display(self):
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            for _ in range(self.x):
+                print(" ", end="")
+            print("#" * self.width)
