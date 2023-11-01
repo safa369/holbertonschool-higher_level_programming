@@ -21,7 +21,7 @@ class Base:
     def to_json_string(list_dictionnaries):
         """static method"""
         if list_dictionnaries is None or len(list_dictionnaries) == 0:
-            return "[]"
+            list_dictionnaries = "[]"
         return json.dumps(list_dictionnaries)
 
     @classmethod
