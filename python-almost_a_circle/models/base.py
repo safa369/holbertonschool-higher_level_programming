@@ -17,7 +17,9 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionnaries):
+        """static method"""
         if list_dictionnaries is None:
             return []
         return json.JSONEncoder().encode(list_dictionnaries)
