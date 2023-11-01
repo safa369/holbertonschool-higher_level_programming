@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """model of square"""
-from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -39,3 +38,14 @@ class Square(Rectangle):
             setattr(self, attr, arg)
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+    def to_dictionary(self):
+        """return a dictionary representation"""
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
+        
