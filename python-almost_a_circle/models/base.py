@@ -20,6 +20,6 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionnaries):
         """static method"""
-        if list_dictionnaries is None:
-            return []
+        if list_dictionnaries is None or len(list_dictionnaries) == 0:
+            return "[]"
         return json.JSONEncoder().encode(list_dictionnaries)
