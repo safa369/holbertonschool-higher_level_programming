@@ -27,6 +27,9 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         file_name = cls.__name__ + ".json"
-        lis_ob = [obj.to_dictionary() for obj in list_objs]
+        if list_objs is None:
+            lis_ob = "[]"
+        else:
+            lis_ob = [obj.to_dictionary() for obj in list_objs]
         with open(file_name, 'w') as js_file:
             js_file.write(cls.to_json_string(lis_ob))
