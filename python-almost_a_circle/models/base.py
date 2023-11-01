@@ -22,4 +22,11 @@ class Base:
         """static method"""
         if list_dictionnaries is None or len(list_dictionnaries) == 0:
             return "[]"
-        return json.JSONEncoder().encode(list_dictionnaries)
+        return json.dumps(list_dictionnaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        file_name = cls.__name__ + ".json"
+        lis_ob = [obj.to_dictionary() for obj in list_objs]
+        with open(file_name, 'w') as js_file:
+            js_file.write(cls.to_json_string(lis_ob))
