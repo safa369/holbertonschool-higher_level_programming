@@ -34,3 +34,9 @@ class Base:
             lis_ob = [obj.to_dictionary() for obj in list_objs]
         with open(file_name, 'w') as js_file:
             js_file.write(cls.to_json_string(lis_ob))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return "[]"
+        return json.loads(json_string)
