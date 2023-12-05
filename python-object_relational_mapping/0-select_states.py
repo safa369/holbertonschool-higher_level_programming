@@ -8,4 +8,4 @@ if __name__ == "__main__":
     mycursor = db.cursor()
     x = mycursor.execute("SELECT * FROM states ORDER BY states.id")
     for i in x:
-        print(mycursor.fetchall())
+        print(mycursor.fetchone())
