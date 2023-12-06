@@ -2,8 +2,7 @@
 """
 filter cities from database
 Using hbtn_0e_4_usa database
-safe fromSQL injection
-                  
+safe from SQL injection
 """
 import MySQLdb
 from sys import argv
@@ -31,3 +30,4 @@ if __name__ == "__main__":
         idx += 1
     print('')
     db.close()
+    myc.close()
