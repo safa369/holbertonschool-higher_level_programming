@@ -12,7 +12,7 @@ if __name__ == "__main__":
                         db=argv[3])
     myc = db.cursor()
     myc.execute("SELECT cities.id, cities.name, states.name "
-                "FROM cities join states ON states.id=cities.id "
+                "FROM cities join states ON states.id=cities.state_id "
                 "ORDER BY cities.id")
     fet = myc.fetchall()
     for x in fet:
