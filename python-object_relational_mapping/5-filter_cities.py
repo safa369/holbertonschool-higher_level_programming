@@ -17,7 +17,7 @@ if __name__ == "__main__":
     """cursor"""
     myc = db.cursor()
     """execute"""
-    myc.execute("SELECT cities.id, cities.name "
+    myc.execute("SELECT cities.name "
                 "FROM states join cities "
                 "ON states.id = cities.state_id "
                 "WHERE states.name = %s "
@@ -25,7 +25,6 @@ if __name__ == "__main__":
     """fetchall"""
     fet = myc.fetchall()
     for x in fet:
-        if x[0] == names:
-            print(x[0])
+            print(x)
     """close"""
     db.close()
