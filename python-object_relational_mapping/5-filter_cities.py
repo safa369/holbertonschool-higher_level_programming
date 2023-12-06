@@ -5,12 +5,11 @@ Using hbtn_0e_4_usa database
 safe from SQL injection
 """
 
-
-import MySQLdb
-from sys import argv
-
-names = argv[4]
 if __name__ == "__main__":
+    import MySQLdb
+    from sys import argv
+
+    names = argv[4]
     db = MySQLdb.connect(
                         host="localhost",
                         port=3306,
