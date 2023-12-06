@@ -4,6 +4,8 @@ filter cities from database
 Using hbtn_0e_4_usa database
 safe from SQL injection
 """
+
+
 import MySQLdb
 from sys import argv
 
