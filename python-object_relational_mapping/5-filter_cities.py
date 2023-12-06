@@ -29,5 +29,6 @@ if __name__ == "__main__":
         print(x[0], end='')
         idx += 1
     print('')
-    db.close()
     myc.close()
+    db.close()
+
