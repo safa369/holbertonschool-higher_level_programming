@@ -11,7 +11,7 @@ if __name__ == "__main__":
                         password=argv[2],
                         db=argv[3])
     myc = db.cursor()
-    myc.execute("SELECT cities.id, states.name "
+    myc.execute("SELECT cities.id, cities.name, states.name "
                 "FROM cities join states ON states.id=cities.id "
                 "ORDER BY cities.id")
     fet = myc.fetchall()
