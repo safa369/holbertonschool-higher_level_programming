@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """
 filter cities from database
+Using hbtn_0e_4_usa database
+safe fromSQL injection
+                  
 """
 import MySQLdb
 from sys import argv
