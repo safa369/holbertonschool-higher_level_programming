@@ -1,26 +1,26 @@
 #!/usr/bin/python3
-""" filter cities from databse"""
+""" filter cities from databse """
 import MySQLdb
 from sys import argv
 
 names = argv[4]
 if __name__ == "__main__":
-    """connect"""
+    """ connect """
     db = MySQLdb.connect(
                         host="localhost",
                         port=3306,
                         user=argv[1],
                         password=argv[2],
                         db=argv[3])
-    """cursor"""
+    """ cursor """
     myc = db.cursor()
-    """execute"""
+    """ execute """
     myc.execute("SELECT cities.name "
                 "FROM cities join states "
                 "ON states.id = cities.state_id "
                 "AND states.name = %s "
                 "ORDER BY cities.id", (names, ))
-    """fetchall"""
+    """ fetchall """
     fet = myc.fetchall()
     idx = 0
     """print"""
