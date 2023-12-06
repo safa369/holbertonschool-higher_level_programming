@@ -17,8 +17,8 @@ if __name__ == "__main__":
     """cursor"""
     myc = db.cursor()
     """execute"""
-    myc.execute("SELECT cities.name "
-                "FROM cities join states "
+    myc.execute("SELECT cities.id, cities.name "
+                "FROM states join cities "
                 "ON states.id = cities.state_id "
                 "WHERE states.name = %s "
                 "ORDER BY cities.id", (names,))
