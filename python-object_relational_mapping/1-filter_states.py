@@ -15,4 +15,5 @@ if __name__ == "__main__":
     x = mycursor.fetchall()
     for i in x:
         print(i)
-db.close()
+    db.close()
+    x.close()
