@@ -18,13 +18,18 @@ if __name__ == "__main__":
     myc = db.cursor()
     """execute"""
     myc.execute("SELECT cities.name "
-                "FROM states join cities "
+                "FROM cities join states "
                 "ON states.id = cities.state_id "
-                "WHERE states.name = %s "
-                "ORDER BY cities.id", (names,))
+                "AND states.name = %s "
+                "ORDER BY cities.id", (names, ))
     """fetchall"""
     fet = myc.fetchall()
+    idx=0
     for x in fet:
-            print(x)
+        if idx != 0:
+            print(',', end=' ')
+        print(x[0], end='')
+        idx+=1
+    print('')
     """close"""
     db.close()
