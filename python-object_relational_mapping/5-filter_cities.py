@@ -23,6 +23,7 @@ if __name__ == "__main__":
     """fetchall"""
     fet = myc.fetchall()
     idx = 0
+    """print"""
     for x in fet:
         if idx != 0:
             print(',', end=' ')
