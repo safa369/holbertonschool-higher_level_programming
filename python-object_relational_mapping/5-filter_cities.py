@@ -4,8 +4,6 @@ import MySQLdb
 from sys import argv
 
 names = argv[4]
-
-
 if __name__ == "__main__":
     """connect"""
     db = MySQLdb.connect(
@@ -24,12 +22,12 @@ if __name__ == "__main__":
                 "ORDER BY cities.id", (names, ))
     """fetchall"""
     fet = myc.fetchall()
-    idx=0
+    idx = 0
     for x in fet:
         if idx != 0:
             print(',', end=' ')
         print(x[0], end='')
-        idx+=1
+        idx += 1
     print('')
     """close"""
     db.close()
