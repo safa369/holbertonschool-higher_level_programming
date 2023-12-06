@@ -10,10 +10,10 @@ if __name__ == "__main__":
     """cursor"""
     mycursor = db.cursor()
     """execute"""
-    mycursor.execute("SELECT * FROM states WHERE\
-                      name LIKE 'N%' ORDER BY states.id")
+    mycursor.execute("SELECT * FROM states\
+                     ORDER BY states.id")
     x = mycursor.fetchall()
-    for i in x:
-        print(i)
+    for state in x:
+        if state[1][0] == 'N':
+            print(state)
     db.close()
-    x.close()
