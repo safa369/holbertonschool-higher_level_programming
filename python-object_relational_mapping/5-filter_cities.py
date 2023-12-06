@@ -3,7 +3,7 @@
 import MySQLdb
 from sys import argv
 
-name = argv[4]
+names = argv[4]
 
 
 if __name__ == "__main__":
@@ -21,11 +21,11 @@ if __name__ == "__main__":
                 "FROM cities join states "
                 "ON states.id = cities.state_id "
                 "WHERE states.name = %s "
-                "ORDER BY cities.id", (name,))
+                "ORDER BY cities.id", (names,))
     """fetchall"""
     fet = myc.fetchall()
     for x in fet:
-        if x[0] == name:
+        if x[0] == names:
             print(x[0])
     """close"""
     db.close()
