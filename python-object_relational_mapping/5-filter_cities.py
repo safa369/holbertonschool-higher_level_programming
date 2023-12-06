@@ -16,9 +16,11 @@ if __name__ == "__main__":
                         db=argv[3])
     """cursor"""
     myc = db.cursor()
+    """execute"""
     myc.execute("SELECT cities.name "
                 "FROM cities join states "
-                "ON states.name= %s"
+                "ON states.id = cities.state_id "
+                "WHERE states.name = %s "
                 "ORDER BY cities.id", (name,))
     """fetchall"""
     fet = myc.fetchall()
