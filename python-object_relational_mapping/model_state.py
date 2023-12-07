@@ -1,4 +1,5 @@
 #!usr/bin/python3
+"""create table"""
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String
 
