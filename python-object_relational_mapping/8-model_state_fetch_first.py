@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""list all states"""
+"""list states first id"""
+
+
 from sys import argv
 from sqlalchemy import create_engine
 from model_state import Base, State
