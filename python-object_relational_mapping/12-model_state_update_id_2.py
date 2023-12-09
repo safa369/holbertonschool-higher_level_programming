@@ -8,13 +8,14 @@ from sqlalchemy import update
 
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(argv[1], argv[2], argv[3]))
 
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State)\
+
+    session.query(State)\
         .filter(id == 2)\
         .update({State.name: "New Mexico"})
     session.commit()
