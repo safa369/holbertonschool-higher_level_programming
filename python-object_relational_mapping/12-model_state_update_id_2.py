@@ -4,6 +4,7 @@ from sys import argv
 from sqlalchemy import create_engine
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import update
 
 
 if __name__ == "__main__":
